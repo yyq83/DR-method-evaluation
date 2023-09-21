@@ -1,0 +1,38 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 20
+Rules claiming more threads will be scaled down.
+Job stats:
+job                  count    min threads    max threads
+-----------------  -------  -------------  -------------
+evaluate                 1              1              1
+generate_CV_folds        1              1              1
+total                    2              1              1
+
+Select jobs to execute...
+
+[Wed Sep 20 16:18:33 2023]
+rule generate_CV_folds:
+    input: BNNR/Datasets/Ydataset.mat
+    output: Evaluation/BNNR/Ydataset/final_CV_folds.csv
+    jobid: 1
+    wildcards: outdir=Evaluation, method=BNNR, dataset=Ydataset
+    resources: tmpdir=/tmp
+
+[Wed Sep 20 16:33:05 2023]
+Finished job 1.
+1 of 2 steps (50%) done
+Select jobs to execute...
+
+[Wed Sep 20 16:33:05 2023]
+rule evaluate:
+    input: Evaluation/BNNR/Ydataset/final_CV_folds.csv
+    output: Evaluation/BNNR/Ydataset/Plot/BNNR_Ydataset_auc.png, Evaluation/BNNR/Ydataset/Plot/BNNR_Ydataset_aupr.png
+    jobid: 0
+    wildcards: outdir=Evaluation, method=BNNR, dataset=Ydataset
+    resources: tmpdir=/tmp
+
+[Wed Sep 20 16:33:15 2023]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: /home1/yangyinqi/DR-method-evaluation/.snakemake/log/2023-09-20T161833.718966.snakemake.log

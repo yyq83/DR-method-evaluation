@@ -1,0 +1,36 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                  count    min threads    max threads
+-----------------  -------  -------------  -------------
+evaluate                 1              1              1
+generate_CV_folds        1              1              1
+total                    2              1              1
+
+Select jobs to execute...
+
+[Wed Sep 20 16:02:06 2023]
+rule generate_CV_folds:
+    input: BNNR/Datasets/Ydataset.mat
+    output: Evaluation/BNNR/Ydataset/final_CV_folds.csv
+    jobid: 1
+    wildcards: outdir=Evaluation, method=BNNR, dataset=Ydataset
+    resources: tmpdir=/tmp
+
+Terminating processes on user request, this might take some time.
+[Wed Sep 20 16:11:10 2023]
+Error in rule generate_CV_folds:
+    jobid: 1
+    output: Evaluation/BNNR/Ydataset/final_CV_folds.csv
+    shell:
+        
+		cd BNNR  
+		matlab -nodisplay -nosplash -nodesktop -r "evaluation('BNNR','Ydataset','Evaluation'); exit;"
+		cd ..
+		python origin-pre_2_final.py --file_path="Evaluation/BNNR/Ydataset"
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Complete log: /home1/yangyinqi/DR-method-evaluation/.snakemake/log/2023-09-20T160206.098476.snakemake.log

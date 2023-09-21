@@ -1,0 +1,23 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                  count    min threads    max threads
+-----------------  -------  -------------  -------------
+evaluate                 1              1              1
+generate_CV_folds        1              1              1
+total                    2              1              1
+
+Select jobs to execute...
+
+[Wed Sep 20 16:11:15 2023]
+rule generate_CV_folds:
+    input: BNNR/Datasets/Ydataset.mat
+    output: Evaluation/BNNR/Ydataset/final_CV_folds.csv
+    jobid: 1
+    wildcards: outdir=Evaluation, method=BNNR, dataset=Ydataset
+    resources: tmpdir=/tmp
+
+Terminating processes on user request, this might take some time.
+Cancelling snakemake on user request.

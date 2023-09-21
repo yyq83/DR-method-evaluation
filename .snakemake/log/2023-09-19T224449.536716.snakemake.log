@@ -1,0 +1,18 @@
+Building DAG of jobs...
+Job stats:
+job               count    min threads    max threads
+--------------  -------  -------------  -------------
+run_method_pre        1              1              1
+total                 1              1              1
+
+
+[Tue Sep 19 22:44:49 2023]
+rule run_method_pre:
+    input: BNNR/Datasets/Fdataset.mat
+    output: PredictionResults/BNNR_Fdataset.csv
+    jobid: 0
+    wildcards: method=BNNR, dataset=Fdataset
+    resources: tmpdir=/tmp
+
+RuleException in line 1 of /home1/yangyinqi/DR-method-evaluation/Snakefile:
+'Wildcards' object has no attribute 'output'

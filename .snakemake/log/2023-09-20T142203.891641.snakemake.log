@@ -1,0 +1,24 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                    count    min threads    max threads
+-------------------  -------  -------------  -------------
+origin_pre_to_final        1              1              1
+total                      1              1              1
+
+Select jobs to execute...
+
+[Wed Sep 20 14:22:03 2023]
+rule origin_pre_to_final:
+    output: Evaluation/BNNR/Fdataset/final_CV_folds.csv
+    jobid: 0
+    wildcards: outdir=Evaluation, method=BNNR, dataset=Fdataset
+    priority: 1
+    resources: tmpdir=/tmp
+
+[Wed Sep 20 14:22:04 2023]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: /home1/yangyinqi/DR-method-evaluation/.snakemake/log/2023-09-20T142203.891641.snakemake.log
