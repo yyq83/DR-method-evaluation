@@ -1,3 +1,0 @@
-WildcardError in line 19 of /home1/yangyinqi/DR-method-evaluation/Snakefile:
-No values given for wildcard 'outdir'.
-  File "/home1/yangyinqi/DR-method-evaluation/Snakefile", line 19, in <module>

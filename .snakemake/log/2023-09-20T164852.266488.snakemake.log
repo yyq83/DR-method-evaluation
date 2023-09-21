@@ -1,4 +1,0 @@
-Building DAG of jobs...
-MissingInputException in line 4 of /home1/yangyinqi/DR-method-evaluation/Snakefile:
-Missing input files for rule run_method_pre:
-HGIMC/Datasets/Fdataset.mat
