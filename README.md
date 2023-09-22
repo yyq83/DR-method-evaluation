@@ -5,3 +5,6 @@
 Matlab 2020
 
 ## Installaion
+~~~~~
+conda env create -f environment.yaml
+~~~~~
