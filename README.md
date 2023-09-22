@@ -19,22 +19,20 @@ Go to the Snakemake folder
 ~~~~
 cd Snakemake
 ~~~~
-1. 
 If you only want to get the prediction results and scalability (time and memory peak consumption) of the method on the specified dataset, run the command:
 ~~~~
 snakemake -j 1 {outdir}/{method}_{dataset}.csv
 ~~~~
-example : BNNR method on Fdataset  
-command :`snakemake -j 1 snakemake -j 1 Evaluation/BNNR_Fdataset.csv`  
+Example : BNNR method on Fdataset  
+Command :`snakemake -j 1 snakemake -j 1 Evaluation/BNNR_Fdataset.csv`  
 After running, you can find the prediction results in the Evalutaion folder, as well as time and memory consumption logs in the corresponding Benchmark folder and log folder below.  
-
-2. 
+  
 If you want to get the full results of the method on the specified dataset, including prediction results, scalability,performance,auc curve and aupr curve,run the command: 
 ~~~~
 snakemake -j 1 {outdir}/{method}/{dataset}/Plot/{method}_{dataset}_auc.png
 ~~~~
-example : BNNR method on Cdataset  
-command : `snakemake -j 1 Evaluation/BNNR/Cdataset/Plot/BNNR_Cdataset_auc.png`  
+Example : BNNR method on Cdataset  
+Command : `snakemake -j 1 Evaluation/BNNR/Cdataset/Plot/BNNR_Cdataset_auc.png`  
 After running, you can find the full results in the Evalutaion folder, too.
 
 ## Datasets
