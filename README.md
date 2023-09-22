@@ -23,7 +23,7 @@ If you only want to get the prediction results and scalability (time and memory 
 ~~~~
 snakemake -j 1 {outdir}/{method}_{dataset}.csv
 ~~~~
-example: `snakemake -j 1 snakemake -j 1 Evaluation/BNNR_Fdataset.csv`
+example: `snakemake -j 1 snakemake -j 1 Evaluation/BNNR_Fdataset.csv`  
 If you want to get the full results of the method on the specified dataset, including evaluation results, prediction results, run the command: 
 ~~~~
 snakemake -j 1 {outdir}/{method}/{dataset}/Plot/{method}_{dataset}_auc.png
