@@ -1,5 +1,9 @@
 name: snakemake_env
 channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+  - http://mirrors.aliyun.com/pypi/simple/
+  - conda-forge
+  - defaults
   - defaults
 dependencies:
   - _libgcc_mutex=0.1=main
