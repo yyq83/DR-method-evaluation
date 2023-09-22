@@ -23,14 +23,16 @@ If you only want to get the prediction results and scalability (time and memory 
 ~~~~
 snakemake -j 1 {outdir}/{method}_{dataset}.csv
 ~~~~
-example: `snakemake -j 1 snakemake -j 1 Evaluation/BNNR_Fdataset.csv`  
+example : BNNR method on Fdataset  
+command :`snakemake -j 1 snakemake -j 1 Evaluation/BNNR_Fdataset.csv`  
 
 
-If you want to get the full results of the method on the specified dataset, including evaluation results, prediction results, run the command: 
+If you want to get the full results of the method on the specified dataset, including prediction results, scalability,performance,auc curve and aupr curve,run the command: 
 ~~~~
 snakemake -j 1 {outdir}/{method}/{dataset}/Plot/{method}_{dataset}_auc.png
 ~~~~
-example: `snakemake -j 1 Evaluation/BNNR/Cdataset/Plot/BNNR_Cdataset_auc.png`
+example : BNNR method on Cdataset
+command : `snakemake -j 1 Evaluation/BNNR/Cdataset/Plot/BNNR_Cdataset_auc.png`
 
 ## Datasets
 The following datasets were used in our study：
