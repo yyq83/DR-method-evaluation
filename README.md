@@ -2,7 +2,7 @@
 ![Overview of DR evaluation](./figures/overflow_v16.png )
 
 ## Requirements
-Matlab 2020
+Matlab 2020a
 
 ## Installation
 Download by
