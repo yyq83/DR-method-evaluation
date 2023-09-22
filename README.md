@@ -25,7 +25,7 @@ snakemake -j 1 {outdir}/{method}_{dataset}.csv
 ~~~~
 Example : BNNR method on Fdataset  
 Command :`snakemake -j 1 snakemake -j 1 Evaluation/BNNR_Fdataset.csv`  
-After running, you can find the prediction results in the Evalutaion folder, as well as time and memory consumption logs in the corresponding Benchmark folder and log folder below.  
+After running, you can find the prediction results in the Evalutaion folder, as well as time and memory consumption logs in the corresponding Benchmark folder and log folder.  
   
 If you want to get the full results of the method on the specified dataset, including prediction results, scalability,performance,auc curve and aupr curve,run the command: 
 ~~~~
