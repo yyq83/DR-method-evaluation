@@ -31,6 +31,10 @@ If you want to get the full results of the method on the specified dataset, incl
 ~~~~
 snakemake -j 1 {outdir}/{method}/{dataset}/Plot/{method}_{dataset}_auc.png
 ~~~~
+or
+~~~~
+snakemake -j 1 {outdir}/{method}/{dataset}/Plot/{method}_{dataset}_aupr.png  
+~~~~
 Example : BNNR method on Cdataset  
 Command : `snakemake -j 1 Evaluation/BNNR/Cdataset/Plot/BNNR_Cdataset_auc.png`  
 After completing the run, you can locate comprehensive results in the Evaluation folder. This encompasses prediction results, AUC curves, and AUPR curves found in the Plot folder, as well as AUC, AUPR, and F1 values stored in either the Benchmark folder or the Log folder.
