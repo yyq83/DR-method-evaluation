@@ -31,7 +31,7 @@ If you want to get the full results of the method on the specified dataset, incl
 ~~~~
 snakemake -j 1 {outdir}/{method}/{dataset}/Plot/{method}_{dataset}_auc.png
 ~~~~
-example : BNNR method on Cdataset
+example : BNNR method on Cdataset  
 command : `snakemake -j 1 Evaluation/BNNR/Cdataset/Plot/BNNR_Cdataset_auc.png`
 
 ## Datasets
