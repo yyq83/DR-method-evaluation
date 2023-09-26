@@ -3,7 +3,7 @@ drug repositioning method evaluation
 ## How to use
 We use two methods HGIMC and BNNR as examples. 
 
-1. If you only want to get the prediction results and scalability (time and memory peak consumption) of the method on the specified dataset, run the command:
+1. If you only want to get the prediction results and scalability (time and memory peak consumption) of the method on the specified dataset, run the command(rule run_method_pre):
 ~~~~
 snakemake -j 1 {outdir}/{method}_{dataset}.csv
 ~~~~
@@ -13,7 +13,7 @@ Command : `snakemake -j 1 Evaluation/BNNR_Fdataset.csv --use-conda`
 If you add the parameter `--use-conda`, snakemake will automatically create a running environment for you.
 Following the completion of the run, you'll discover the prediction results within the Evaluation folder. Additionally, you can access logs detailing time and memory consumption in their respective Benchmark and Log folders. Users can add their own data sets to the Datasets folder of the specified method folder and run. For example, put Ydataset under the folder `BNNR/Datasets`.
   
-2. If you want to get the full results of the method on the specified dataset, including prediction results, scalability,performance,auc curve and aupr curve,run the command: 
+2. If you want to get the full results of the method on the specified dataset, including prediction results, scalability,performance,auc curve and aupr curve,run the command(rule evaluate): 
 ~~~~
 snakemake -j 1 {outdir}/{method}/{dataset}/Plot/{method}_{dataset}_auc.png
 ~~~~
