@@ -43,7 +43,7 @@ If you wish to incorporate a new method into the process, simply follow these st
 2. Store the corresponding dataset in the Datasets folder.
 3. Utilize `method_pre.m` and `crossval_method.m` as templates to adapt the `1. import data code` and `2. algorithmic code` sections according to your specific requirements, replacing them as needed.
 
-If the method has already been crossvalidated, you just need to place the csv file results under the corresponding folder of the method, convert it to the final_CV_folds.csv file using the originate-pre_2_final.py script, and then run the Snakefile's evaluate rule.
+If the method has already been crossvalidated, you just need to place the csv file results under the corresponding folder of the method, convert it to the final_CV_folds.csv file using the `originate-pre_2_final.py` script, and then run the Snakefile's evaluate rule.
   
 If your method is not written in matlab, you should replace the `< >` placeholders in the Snakefile's `run_method_prerule` and `generate_CV_folds` rule shell with your own run script and make the necessary adjustments to your code accordingly.
 ~~~~
