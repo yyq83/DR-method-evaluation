@@ -1,7 +1,7 @@
-# DR-method-evaluation
+# How to use
+## DAG
 ![dag of DR evaluation snakemake](./dag_evaluate.png)
 ---------
-## Usage
 Go to the Snakemake folder
 ~~~~
 cd Snakemake
