@@ -62,7 +62,7 @@ rule run_method_pre:
         """
         # Run and record execution time and memory usage to the log file.
         (cd {wildcards.method} &&
-        /usr/bin/time -f "\nExecution Time: %E\nPeak Memory Usage: %M KB" <your run script> 2>&1 | tee {log}  ##modify the script
+        /usr/bin/time -f "\nExecution Time: %E\nPeak Memory Usage: %M KB" <your run script> 2>&1 | tee {log}  ## modify the script and adjust your code appropriately
         """
 
 rule generate_CV_folds:
@@ -80,8 +80,8 @@ rule generate_CV_folds:
     shell:
         """
         # Run script and generate cross-validation fold data.
-        (cd {wildcards.method} &&
-        <your script> &&
+        (cd {wildcards.method} &&   
+        <your script> &&      ## modify the script and adjust your code appropriately
         cd .. &&
         python origin-pre_2_final.py --file_path="{wildcards.outdir}/{wildcards.method}/{wildcards.dataset}" )  2>&1 | tee {log}
         """
