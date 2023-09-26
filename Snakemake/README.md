@@ -25,7 +25,6 @@ After completing the run, you can locate comprehensive results in the Evaluation
 
 ## DAG
 ![dag of DR evaluation snakemake](./dag_evaluate.png#pic_center)
-![dag of DR pre snakemake](./dag_pre.png#pic_center)
 ## Datasets
 The following datasets were used in our study：
 `Fdataset`, `Cdataset`, `Ydataset`, `DNdataset`, `HDVD`, `LAGCN`, `LRSSL`, `SCMFDD_L`, `deepDR`, `iDrug`, `TLHGBI`, which is available at: [https://zenodo.org/record/8357512](https://zenodo.org/record/8357512).
