@@ -45,7 +45,7 @@ If you wish to incorporate a new method into the process, simply follow these st
 
 If the method has already been crossvalidated, you just need to place the csv file results under the corresponding folder of the method, convert it to the final_CV_folds.csv file using the `originate-pre_2_final.py` script, and then run the Snakefile's evaluate rule.
   
-If your method is not written in matlab, you should replace the `< >` placeholders in the Snakefile's `run_method_prerule` and `generate_CV_folds` rule shell with your own run script and make the necessary adjustments to your code accordingly.
+If your method is not written in matlab, you should replace the `< >` placeholders in the Snakefile's `run_method_prerule` and `generate_CV_folds` rule shell with your own run script and make the necessary adjustments to your code accordingly. The `evaluate` rule  do not need to be modified.
 ~~~~
 rule run_method_pre:
     input:
@@ -62,7 +62,7 @@ rule run_method_pre:
         """
         # Run and record execution time and memory usage to the log file.
         (cd {wildcards.method} &&
-        /usr/bin/time -f "\nExecution Time: %E\nPeak Memory Usage: %M KB" <your run script>; exit;") 2>&1 | tee {log}  ##modify the script
+        /usr/bin/time -f "\nExecution Time: %E\nPeak Memory Usage: %M KB" <your run script> 2>&1 | tee {log}  ##modify the script
         """
 
 rule generate_CV_folds:
