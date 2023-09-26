@@ -7,7 +7,7 @@ snakemake -j 1 {outdir}/{method}_{dataset}.csv
 ~~~~
 Example : BNNR method on Fdataset  
 Command : `snakemake -j 1 Evaluation/BNNR_Fdataset.csv`  
-Command ：`snakemake -j 1 Evaluation/BNNR_Fdataset.csv --use-conda`  
+Command : `snakemake -j 1 Evaluation/BNNR_Fdataset.csv --use-conda`  
 If you add the parameter `--use-conda`, snakemake will automatically create a running environment for you.
 Following the completion of the run, you'll discover the prediction results within the Evaluation folder. Additionally, you can access logs detailing time and memory consumption in their respective Benchmark and Log folders.
   
