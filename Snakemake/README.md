@@ -1,5 +1,5 @@
 # DR-method-evaluation
-drug repositioning method evaluation
+![dag of DR evaluation snakemake](./dag_evaluate.png)
 ---------
 ## Usage
 Go to the Snakemake folder
