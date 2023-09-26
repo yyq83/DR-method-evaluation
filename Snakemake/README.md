@@ -38,7 +38,26 @@ The following datasets were used in our study：
 
 
 ## Adding new methods
-If you want to add a new method to the process, just place the method folder in the current folder and the corresponding saved dataset in the dataset folder, using `method_pre.m` and `crossval_method.m` as samples to modify the `1. import data code` and `2. algorithmic code` to your own code.  
+If you want to add a new method to the process, just place the method folder in the current folder and the corresponding saved dataset in the dataset folder, using `method_pre.m` and `crossval_method.m` as samples to modify the `1. import data code` and `2. algorithmic code` to your own code. You should modify the `shell` in the snakefile rule to your own run script.
+~~~~
+rule run_method_pre:
+    input:
+        "{method}/Datasets/{dataset}.mat"
+    output:
+        "{outdir}/{method}_{dataset}.csv"
+    conda:
+        "environment.yaml"
+    log:
+        "{outdir}/log/benchmark_{method}_{dataset}.log"
+    benchmark:
+        "{outdir}/Benchmark/benchmark_{method}_{dataset}.txt"
+    shell:
+        """
+        # Run and record execution time and memory usage to the log file.
+        (cd {wildcards.method} &&
+        /usr/bin/time -f "\nExecution Time: %E\nPeak Memory Usage: %M KB" {your run script}; exit;") 2>&1 | tee {log}  # modify your run script code
+        """
+~~~~
   
-If the method has already been crossvalidated, you only need to place the csv file results under the corresponding folder of the method.
+If the method has already been crossvalidated, you just need to place the csv file results under the corresponding folder of the method, convert it to the final_CV_folds.csv file using the originate-pre_2_final.py script, and then run the rule evaluate.
 
