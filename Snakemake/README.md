@@ -38,5 +38,7 @@ The following datasets were used in our study：
 
 
 ## Adding new methods
-
+If you want to add a new method to the process, just place the method folder in the current folder and the corresponding saved dataset in the dataset folder, using `method_pre.m` and `crossval_method.m` as samples to modify the `1. import data code` and `2. algorithmic code` to your own code.  
+  
+If the method has already been crossvalidated, you only need to place the csv file results under the corresponding folder of the method.
 
