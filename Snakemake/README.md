@@ -6,8 +6,9 @@ drug repositioning method evaluation
 snakemake -j 1 {outdir}/{method}_{dataset}.csv
 ~~~~
 Example : BNNR method on Fdataset  
-Command :`snakemake -j 1 Evaluation/BNNR_Fdataset.csv`  
-command ：`snakemake -j 1 Evaluation/BNNR_Fdataset.csv --use-conda`  Snakemake will automatically create software environments for users.
+Command : `snakemake -j 1 Evaluation/BNNR_Fdataset.csv`  
+Command ：`snakemake -j 1 Evaluation/BNNR_Fdataset.csv --use-conda`  
+If you add the parameter `--use-conda`, snakemake will automatically create a running environment for you.
 Following the completion of the run, you'll discover the prediction results within the Evaluation folder. Additionally, you can access logs detailing time and memory consumption in their respective Benchmark and Log folders.
   
 2. If you want to get the full results of the method on the specified dataset, including prediction results, scalability,performance,auc curve and aupr curve,run the command: 
@@ -20,7 +21,8 @@ snakemake -j 1 {outdir}/{method}/{dataset}/Plot/{method}_{dataset}_aupr.png
 ~~~~
 Example : BNNR method on Cdataset  
 Command : `snakemake -j 1 Evaluation/BNNR/Cdataset/Plot/BNNR_Cdataset_auc.png`  
-command : `snakemake -j 1 Evaluation/BNNR/Cdataset/Plot/BNNR_Cdataset_auc.png --use-conda`  Snakemake will automatically create software environments for users.
+Command : `snakemake -j 1 Evaluation/BNNR/Cdataset/Plot/BNNR_Cdataset_auc.png --use-conda`  
+If you add the parameter `--use-conda`, snakemake will automatically create a running environment for you.
 After completing the run, you can locate comprehensive results in the Evaluation folder. This encompasses prediction results, AUC curves, and AUPR curves found in the Plot folder, as well as AUC, AUPR, and F1 values stored in either the Benchmark folder or the Log folder.
 ## 
 ## DAG
