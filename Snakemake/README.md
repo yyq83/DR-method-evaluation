@@ -1,6 +1,8 @@
 # DR-method-evaluation
 drug repositioning method evaluation
 ## How to use
+We use two methods HGIMC and BNNR as examples. 
+
 1. If you only want to get the prediction results and scalability (time and memory peak consumption) of the method on the specified dataset, run the command:
 ~~~~
 snakemake -j 1 {outdir}/{method}_{dataset}.csv
@@ -36,4 +38,5 @@ The following datasets were used in our study：
 
 
 ## Adding new methods
+
 
