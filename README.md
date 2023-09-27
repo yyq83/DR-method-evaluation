@@ -48,7 +48,7 @@ The following datasets were used in our study：
 
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-MIT License
-Copyright (c) 2023 splashink
+MIT License  
+Copyright (c) 2023 yinqi yang
 
 
