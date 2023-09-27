@@ -43,7 +43,8 @@ After completing the run, you can locate comprehensive results in the Evaluation
 Users can add the command line parameter `--use-conda`, and snakemake will automatically create a running environment.
 ## Datasets
 The following datasets were used in our study：
-`Fdataset`, `Cdataset`, `Ydataset`, `DNdataset`, `HDVD`, `LAGCN`, `LRSSL`, `SCMFDD_L`, `deepDR`, `iDrug`, `TLHGBI`, which is available at: [https://zenodo.org/record/8357512](https://zenodo.org/record/8357512).
+`Fdataset`, `Cdataset`, `Ydataset`, `DNdataset`, `HDVD`, `LAGCN`, `LRSSL`, `SCMFDD_L`, `deepDR`, `iDrug`, `TLHGBI`, which is available at: [https://zenodo.org/record/8357512](https://zenodo.org/record/8357512).[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8357512.svg)](https://zenodo.org/record/8357512)
+
 
 
 ## License
